@@ -60,7 +60,16 @@
     @media print {
       body { background: white; color: #1e293b; padding: 16px; }
       .toolbar, .progress-controls { display: none !important; }
-      .detail-panel { display: grid !important; break-inside: avoid; }
+      .detail-panel {
+        display: grid !important;
+        break-inside: avoid;
+        background: white !important;
+        border-left: 4px solid;
+      }
+      .detail-col p, .deliverable { color: #334155 !important; }
+      .col-label { color: #64748b !important; }
+      .panel-title { color: #1e293b !important; }
+      .n8n-badge { background: #ea4b71 !important; color: white !important; }
     }
 
     /* ── Timeline ─────────────────────────────────── */

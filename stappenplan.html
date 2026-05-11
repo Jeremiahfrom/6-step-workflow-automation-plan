@@ -395,6 +395,7 @@
 
     function togglePhase(n) {
       const panel = document.getElementById('detail-' + n);
+      if (!panel) return;
       if (openPhase === n) {
         panel.classList.remove('open');
         openPhase = null;
@@ -410,18 +411,22 @@
 
     function markDone(n) {
       const ph = document.getElementById('phase-' + n);
+      if (!ph) return;
       ph.classList.remove('active');
       ph.classList.add('done');
     }
 
     function markActive(n) {
       const ph = document.getElementById('phase-' + n);
+      if (!ph) return;
       ph.classList.remove('done');
       ph.classList.add('active');
     }
 
     function markReset(n) {
-      document.getElementById('phase-' + n).classList.remove('done', 'active');
+      const ph = document.getElementById('phase-' + n);
+      if (!ph) return;
+      ph.classList.remove('done', 'active');
     }
   </script>
 </body>
